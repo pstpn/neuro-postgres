@@ -43,3 +43,6 @@ lib*.pc
 /Release/
 /tmp_install/
 /portlock/
+
+# Local files
+.idea

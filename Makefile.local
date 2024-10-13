@@ -1,0 +1,7 @@
+docker:
+	docker build -t npg .
+	docker run --name npg -it npg:latest
+
+rm:
+	docker rm npg
+	docker image rm npg:latest

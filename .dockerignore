@@ -1,0 +1,10 @@
+README.md
+.gitignore
+HISTORY
+Dockerfile
+COPYRIGHT
+.dockerignore
+.github
+.gitattributes
+.git-blame-ignore-revs
+Makefile.local
