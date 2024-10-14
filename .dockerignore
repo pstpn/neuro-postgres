@@ -8,3 +8,4 @@ COPYRIGHT
 .gitattributes
 .git-blame-ignore-revs
 Makefile.local
+.idea

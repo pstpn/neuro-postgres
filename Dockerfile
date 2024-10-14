@@ -17,5 +17,9 @@ USER ubuntu
 
 RUN /usr/local/pgsql/bin/initdb -D /usr/local/pgsql/data && \
     /usr/local/pgsql/bin/pg_ctl -D /usr/local/pgsql/data -l /home/ubuntu/logfile.log start && \
-    /usr/local/pgsql/bin/createdb test && \
-    /usr/local/pgsql/bin/psql test
+    /usr/local/pgsql/bin/createdb test
+
+RUN /usr/local/pgsql/bin/pg_ctl -D /usr/local/pgsql/data -l /home/ubuntu/logfile.log start && \
+    /usr/local/pgsql/bin/psql -d test < sql/init.sql && \
+    /usr/local/pgsql/bin/psql -d test < sql/insert.sql && \
+    /usr/local/pgsql/bin/psql -d test < sql/join.sql
